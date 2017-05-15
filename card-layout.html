@@ -2,14 +2,14 @@
             <time class="published-date">
                 <div class="bodyInfo" style="">
                     <a >
-                        <div class="thecard">  
+                        <div class="thecard" data-idprop="{{id_ldd_property}}">  
                             <div class="card-img"><img src="https://maps.googleapis.com/maps/api/streetview?size=423x212&amp;location={{ds_latitude}},{{ds_longitude}}&amp;heading=151.78&amp;pitch=-0.76&amp;key=AIzaSyBbPW3BdWsXAu9Z7r9Rk20xrRoVjgNeMzg"></div>
                             <div class="card-caption">
                             	<i id="like-btn" class="fa fa-thumbs-o-up like-btn"></i>
                             	<i id="map-btn" class="fa fa-map map-btn" title="Show me the map!" data-lat="{{ds_latitude}}" data-lng="{{ds_longitude}}"></i>
                             	<i id="map-btn" class="fa fa-street-view streetview-btn" style="right: 65px" title="Show me the street view!" data-lat="{{ds_latitude}}" data-lng="{{ds_longitude}}"></i>
                             	{{#countyLinks}}
-							  		<a href="{{ds_translatedlink}}" target="detail" class="countyLink"><i id="map-btn" class="fa {{ds_icon}}" style="{{ds_style}}" title="{{ds_description}}"></i></a>
+							  		<a href="{{ds_translatedlink}}" target="detail" class="countyLink" data-linkname="{{ds_name}}"><i id="map-btn" class="fa {{ds_icon}}" style="{{ds_style}}" title="{{ds_description}}"></i></a>
 							    {{/countyLinks}}
                                 <h1>{{ds_streetnumber}} {{ds_streetname}}, {{city}}, {{state}} {{ds_zipcode}}</h1>
                                 <h1><span style="color: #999">Price </span> ${{vl_deedprice}}</h1>
