@@ -6,7 +6,7 @@
           <div class="card-img" style="height: 100%;"><img style="height: 60%;" src="https://maps.googleapis.com/maps/api/streetview?size=1100x190&amp;location={{ds_latitude}},{{ds_longitude}}&amp;heading=151.78&amp;pitch=-0.76&amp;key=AIzaSyBbPW3BdWsXAu9Z7r9Rk20xrRoVjgNeMzg"></div>
           <div class="card-caption" style="height: 100%;">
             <i id="like-btn" class="fa fa-thumbs-o-up like-btn"><span style="font-size: 0.5vw;background: #446CB3;top: 10px;padding: 1px;">1</span></i>
-                                <i id="like-btn" class="fa fa-thumbs-o-down dislike-btn"><span style="font-size: 0.5vw;background: #446CB3;top: 10px;padding: 1px;">2</span></i>
+            <i id="like-btn" class="fa fa-thumbs-o-down dislike-btn" style="right: 60px"><span style="font-size: 0.5vw;background: #446CB3;top: 10px;padding: 1px;">2</span></i>
             {{#countyLinks}}
             <a href="{{ds_translatedlink}}" target="detail" class="countyLink" data-linkname="{{ds_name}}"><i id="map-btn" class="fa {{ds_icon}}" style="{{ds_style}}" title="{{ds_description}}"></i></a>
             {{/countyLinks}}
