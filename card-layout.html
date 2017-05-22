@@ -12,6 +12,7 @@
                         <i id="map-btn" class="fa fa-map map-btn" title="Show me the map!" data-lat="{{ds_latitude}}" data-lng="{{ds_longitude}}"></i>
                         <i id="map-btn" class="fa fa-street-view streetview-btn" style="right: 65px" title="Show me the street view!" data-lat="{{ds_latitude}}" data-lng="{{ds_longitude}}"></i>
                         
+                        {{#ds_zillowlink}}
                         <a href="{{ds_zillowlink}}" target="zillow" class="countyLink" data-linkname="Zillow">
                             <i id="map-btn" class="" style="right: 20px; top: 78px" title="Show me zillow!" data-lat="{{ds_latitude}}" data-lng="{{ds_longitude}}">
 
@@ -21,6 +22,7 @@
                                 </svg>
                             </i>
                         </a>
+                        {{/ds_zillowlink}}
 
 
                         
