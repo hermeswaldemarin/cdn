@@ -1,44 +1,39 @@
-        <div class="item HOUSE" data-ref="item">
-            <time class="published-date">
-                <div class="bodyInfo" style="">
-                    <a href="#1">
-                        <div class="thecard" data-idprop="{{id_ldd_property}}" data-idx="{{index}}">  
-                            <div class="card-img"><img src="https://maps.googleapis.com/maps/api/streetview?size=423x212&amp;location={{ds_latitude}},{{ds_longitude}}&amp;heading=151.78&amp;pitch=-0.76&amp;key=AIzaSyBbPW3BdWsXAu9Z7r9Rk20xrRoVjgNeMzg"></div>
-                            <div class="card-caption">
-                            	<i id="like-btn" class="fa fa-thumbs-o-up default-btn like-btn" title="Like"
-                                    {{#do_like}} style="color: yellow" {{/do_like}}
-                                ><span style="font-size: 0.5vw;background: #446CB3;top: 10px;padding: 1px;">{{nr_likes}}</span></i>
-
-
-                                <i id="dislike-btn" class="fa fa-thumbs-o-down default-btn dislike-btn"  title="Not Like"
-                                    {{#do_dislike}} style="color: yellow" {{/do_dislike}}
-                                ><span style="font-size: 0.5vw;background: #446CB3;top: 10px;padding: 1px;">{{nr_dislikes}}</span></i>
-
-                                <i id="favorite-btn" class="fa fa-star-o default-btn favorite-btn" title="Mark as Favorite"
-                                    {{#do_favorite}} style="color: yellow" {{/do_favorite}}
-                                ></i>
-
-                                <i id="viewer-btn" class="fa fa-eye default-btn viewer-btn" title="Mark as Viewed"
-                                    {{#do_viewed}} style="color: yellow" {{/do_viewed}}
-                                ></i>
-                            	<i id="map-btn" class="fa fa-map map-btn" title="Show me the map!" data-lat="{{ds_latitude}}" data-lng="{{ds_longitude}}"></i>
-                            	<i id="map-btn" class="fa fa-street-view streetview-btn" style="right: 65px" title="Show me the street view!" data-lat="{{ds_latitude}}" data-lng="{{ds_longitude}}"></i>
-                            	{{#countyLinks}}
-							  		<a href="{{ds_translatedlink}}" target="detail" class="countyLink" data-linkname="{{ds_name}}"><i id="map-btn" class="fa {{ds_icon}}" style="{{ds_style}}" title="{{ds_description}}"></i></a>
-							    {{/countyLinks}}
-                                <h1>{{#limitLength}}{{ds_streetnumber}} {{ds_streetname}}, {{city}}, {{state}} {{ds_zipcode}}{{/limitLength}}</h1>
-                                <h1><span style="color: #999">Price </span> ${{vl_deedprice}}</h1>
-                                <p><span style="color: #999">Price Estimate: </span> {{#vl_zestimate}} ${{vl_zestimate}} {{/vl_zestimate}}</p>
-                                <p><span style="color: #999">Beds: </span>{{ds_beds}}</p>
-                                <p><span style="color: #999">Width: </span>{{ds_width}}</p>
-                                <p><span style="color: #999">Depth: </span>{{ds_depth}}</p>
-                                <p><span style="color: #999">Size (acres): </span>{{ds_sizeinacres}}</p>
-                                <p><span style="color: #999">Property type: </span>{{ds_type}}</p>
-                            </div>
-                            <div class="card-outmore open-popup" data-id="prop-details" data-animation="scale">
-                                <h5>Read more</h5><i id="outmore-icon" class="fa fa-angle-right"></i></div>
-                        </div>
-                    </a>
+<div class="item HOUSE" data-ref="item">
+    <time class="published-date">
+        <div class="bodyInfo" style="">
+            <a href="#1">
+                <div class="thecard" data-idprop="{{id_ldd_property}}" data-idx="{{index}}">
+                    <div class="card-img"><img src="https://maps.googleapis.com/maps/api/streetview?size=423x212&amp;location={{ds_latitude}},{{ds_longitude}}&amp;heading=151.78&amp;pitch=-0.76&amp;key=AIzaSyBbPW3BdWsXAu9Z7r9Rk20xrRoVjgNeMzg"></div>
+                    <div class="card-caption">
+                        <i id="like-btn" class="fa fa-thumbs-o-up default-btn like-btn" title="Like" {{#do_like}} style="color: yellow" {{/do_like}}><span style="font-size: 0.5vw;background: #446CB3;top: 10px;padding: 1px;">{{nr_likes}}</span></i>
+                        <i id="dislike-btn" class="fa fa-thumbs-o-down default-btn dislike-btn" title="Not Like" {{#do_dislike}} style="color: yellow" {{/do_dislike}}><span style="font-size: 0.5vw;background: #446CB3;top: 10px;padding: 1px;">{{nr_dislikes}}</span></i>
+                        <i id="favorite-btn" class="fa fa-star-o default-btn favorite-btn" title="Mark as Favorite" {{#do_favorite}} style="color: yellow" {{/do_favorite}}></i>
+                        <i id="viewer-btn" class="fa fa-eye default-btn viewer-btn" title="Mark as Viewed" {{#do_viewed}} style="color: yellow" {{/do_viewed}}></i>
+                        <i id="map-btn" class="fa fa-map map-btn" title="Show me the map!" data-lat="{{ds_latitude}}" data-lng="{{ds_longitude}}"></i>
+                        <i id="map-btn" class="fa fa-street-view streetview-btn" style="right: 65px" title="Show me the street view!" data-lat="{{ds_latitude}}" data-lng="{{ds_longitude}}"></i>
+                        {{#ds_zillowlink}}
+                        <a href="{{ds_zillowlink}}" target="zillow" class="countyLink" data-linkname="Zillow">
+                            <svg viewBox='0 0 2500 100' xmlns='http://www.w3.org/2000/svg'>
+                                <path d='M60,1L78,14C78,13,58,15,28,24ZM81,16L109,36L91,37L88,46C87,46,71,45,44,54L81,16L78,14Z' fill='#5577bb' />
+                                <path d='M7,87C36,74,78,71,78,71L84,56C82,57,58,55,12,73ZM13,70L59,25L12,39L3,50L20,47Z' fill='#88bb44' />
+                            </svg>
+                        </a>
+                        {{/ds_zillowlink}}
+                        {{#countyLinks}}
+                        <a href="{{ds_translatedlink}}" target="detail" class="countyLink" data-linkname="{{ds_name}}"><i id="map-btn" class="fa {{ds_icon}}" style="{{ds_style}}" title="{{ds_description}}"></i></a> {{/countyLinks}}
+                        <h1>{{#limitLength}}{{ds_streetnumber}} {{ds_streetname}}, {{city}}, {{state}} {{ds_zipcode}}{{/limitLength}}</h1>
+                        <h1><span style="color: #999">Price </span> ${{vl_deedprice}}</h1>
+                        <p><span style="color: #999">Price Estimate: </span> {{#vl_zestimate}} ${{vl_zestimate}} {{/vl_zestimate}}</p>
+                        <p><span style="color: #999">Beds: </span>{{ds_beds}}</p>
+                        <p><span style="color: #999">Width: </span>{{ds_width}}</p>
+                        <p><span style="color: #999">Depth: </span>{{ds_depth}}</p>
+                        <p><span style="color: #999">Size (acres): </span>{{ds_sizeinacres}}</p>
+                        <p><span style="color: #999">Property type: </span>{{ds_type}}</p>
+                    </div>
+                    <div class="card-outmore open-popup" data-id="prop-details" data-animation="scale">
+                        <h5>Read more</h5><i id="outmore-icon" class="fa fa-angle-right"></i></div>
                 </div>
-            </time>
+            </a>
         </div>
+    </time>
+</div>
