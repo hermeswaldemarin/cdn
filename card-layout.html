@@ -11,14 +11,14 @@
                         <i id="viewer-btn" class="fa fa-eye default-btn viewer-btn" title="Mark as Viewed" {{#do_viewed}} style="color: yellow" {{/do_viewed}}></i>
                         <i id="map-btn" class="fa fa-map map-btn" title="Show me the map!" data-lat="{{ds_latitude}}" data-lng="{{ds_longitude}}"></i>
                         <i id="map-btn" class="fa fa-street-view streetview-btn" style="right: 65px" title="Show me the street view!" data-lat="{{ds_latitude}}" data-lng="{{ds_longitude}}"></i>
-                        {{#ds_zillowlink}}
+                        
                         <a href="{{ds_zillowlink}}" target="zillow" class="countyLink" data-linkname="Zillow">
                             <svg viewBox='0 0 2500 100' xmlns='http://www.w3.org/2000/svg'>
                                 <path d='M60,1L78,14C78,13,58,15,28,24ZM81,16L109,36L91,37L88,46C87,46,71,45,44,54L81,16L78,14Z' fill='#5577bb' />
                                 <path d='M7,87C36,74,78,71,78,71L84,56C82,57,58,55,12,73ZM13,70L59,25L12,39L3,50L20,47Z' fill='#88bb44' />
                             </svg>
                         </a>
-                        {{/ds_zillowlink}}
+                     
                         {{#countyLinks}}
                         <a href="{{ds_translatedlink}}" target="detail" class="countyLink" data-linkname="{{ds_name}}"><i id="map-btn" class="fa {{ds_icon}}" style="{{ds_style}}" title="{{ds_description}}"></i></a> {{/countyLinks}}
                         <h1>{{#limitLength}}{{ds_streetnumber}} {{ds_streetname}}, {{city}}, {{state}} {{ds_zipcode}}{{/limitLength}}</h1>
