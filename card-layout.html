@@ -3,7 +3,12 @@
         <div class="bodyInfo" style="">
             <a href="#1">
                 <div class="thecard" data-idprop="{{id_ldd_property}}" data-idx="{{index}}">
-                    <div class="card-img"><img src="https://maps.googleapis.com/maps/api/streetview?size=423x212&amp;location={{ds_latitude}},{{ds_longitude}}&amp;heading=151.78&amp;pitch=-0.76&amp;key=AIzaSyBbPW3BdWsXAu9Z7r9Rk20xrRoVjgNeMzg"></div>
+                    <div class="card-img">
+
+                    <!--<img src="https://maps.googleapis.com/maps/api/streetview?size=423x212&amp;location={{ds_latitude}},{{ds_longitude}}&amp;heading=151.78&amp;pitch=-0.76&amp;key=AIzaSyBbPW3BdWsXAu9Z7r9Rk20xrRoVjgNeMzg">-->
+                    <img src="https://maps.googleapis.com/maps/api/staticmap?maptype=hybrid&center={{ds_latitude}},{{ds_longitude}}&zoom=20&size=423x212&maptype=roadmap&markers=color:red%7Clabel:C%7C{{ds_latitude}},{{ds_longitude}}&key=AIzaSyBbPW3BdWsXAu9Z7r9Rk20xrRoVjgNeMzg">
+
+                    </div>
                     <div class="card-caption">
                         <i id="like-btn" class="fa fa-thumbs-o-up default-btn like-btn" title="Like" {{#do_like}} style="color: yellow" {{/do_like}}><span style="font-size: 0.5vw;background: #446CB3;top: 10px;padding: 1px;">{{nr_likes}}</span></i>
                         <i id="dislike-btn" class="fa fa-thumbs-o-down default-btn dislike-btn" title="Not Like" {{#do_dislike}} style="color: yellow" {{/do_dislike}}><span style="font-size: 0.5vw;background: #446CB3;top: 10px;padding: 1px;">{{nr_dislikes}}</span></i>
